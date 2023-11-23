@@ -1,9 +1,15 @@
 <div class="container">
   <h2>User Settings</h2>
-  <form>
+  <form #form="ngForm">
     <div class="form-group">
       <label for="name">Name</label>
-      <input id="name" name="name" class="form-control" placeholder="Name" />
+      <input
+        id="name"
+        name="name"
+        class="form-control"
+        placeholder="Name"
+        ngModel
+      />
     </div>
     <div class="form-check form-group">
       <input
@@ -11,6 +17,8 @@
         type="checkbox"
         value=""
         id="flexCheckDefault"
+        name="flexCheckDefault"
+        ngModel
       />
       <label class="form-check-label" for="flexCheckDefault">
         Default checkbox
@@ -25,6 +33,8 @@
           type="radio"
           name="flexRadioDefault"
           id="flexRadioDefault1"
+          value="1"
+          ngModel
         />
         <label class="form-check-label" for="flexRadioDefault1">
           Default radio
@@ -36,7 +46,9 @@
           type="radio"
           name="flexRadioDefault"
           id="flexRadioDefault2"
+          value="2"
           checked
+          ngModel
         />
         <label class="form-check-label" for="flexRadioDefault2">
           Default checked radio
@@ -46,7 +58,12 @@
 
     <div class="form-group">
       <label for="subscriptionType">Subscription Type</label>
-      <select class="form-control" id="subscriptionType">
+      <select
+        class="form-control"
+        id="subscriptionType"
+        name="subscriptionType"
+        ngModel
+      >
         <option>Monthly</option>
         <option>Annual</option>
         <option>Lifetime</option>
@@ -60,17 +77,10 @@
         name="notes"
         class="form-control"
         rows="3"
+        ngModel
       ></textarea>
     </div>
-    <div class="form-group">
-      <label for="password">Password</label>
-      <input
-        type="password"
-        id="password"
-        name="password"
-        class="form-control"
-      />
-    </div>
+
     <div class="form-group">
       <label for="testing">Testing</label>
       <input type="date" id="testing" name="testing" class="form-control" />
@@ -78,3 +88,5 @@
     <button class="btn btn-primary">Send</button>
   </form>
 </div>
+
+{{ form.value | json }}
