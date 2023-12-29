@@ -21,6 +21,18 @@
       >
         Enter a name
       </div>
+
+      <button
+        type="button"
+        class="btn btn-primary"
+        name="singleModel"
+        [(ngModel)]="singleModel"
+        btnCheckbox
+        btnCheckboxTrue="On"
+        btnCheckboxFalse="Off"
+      >
+        {{ singleModel }}
+      </button>
     </div>
 
     <div class="form-check form-group">
