@@ -34,7 +34,15 @@
           bsDaterangepicker
         />
       </div>
-      Start Date : {{ startDate }}
+      <div class="form-group">
+        <label for="startTime">Start Time</label>
+        <timepicker
+          [(ngModel)]="startTime"
+          name="startTime"
+          id="startTime"
+        ></timepicker>
+      </div>
+      Start Time : {{ startTime }}
       <button
         type="button"
         class="btn btn-primary"
