@@ -43,6 +43,19 @@
         ></timepicker>
       </div>
       Start Time : {{ startTime }}
+
+      <div class="form-group">
+        User Rating
+        <rating
+          [(ngModel)]="userRating"
+          [max]="maxRating"
+          [readonly]="isReadonly"
+          name="userRating"
+          id="userRating"
+          [titles]="['one', 'two', 'three']"
+        ></rating>
+      </div>
+      User Rating : {{ userRating }}
       <button
         type="button"
         class="btn btn-primary"
